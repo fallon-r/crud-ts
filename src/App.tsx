@@ -14,6 +14,7 @@ import {
   Heading,
   Center
 } from '@chakra-ui/react';
+import Random from './Random';
 
 type Todo = {
   id: number;
@@ -109,6 +110,7 @@ const App = () => {
           </HStack>
         ))}
       </VStack>
+      <Random />
     </Container>
   );
 };
