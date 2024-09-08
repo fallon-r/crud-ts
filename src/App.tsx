@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import Random from './Random';
 
+//  ! Declares type
 type Todo = {
   id: number;
   title: string;
@@ -23,6 +24,7 @@ type Todo = {
 };
 
 const App = () => {
+
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
 
@@ -56,6 +58,7 @@ const App = () => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  // TODO Pseudo Code Here
   const toggleComplete = async (id: number): Promise<void> => {
     const todo = todos.find(todo => todo.id === id);
 
@@ -86,7 +89,7 @@ const App = () => {
           mt={2}
         >Add Todo</Button>
       </Center>
-
+{/* TODO Explain */}
       <VStack spacing={ 4 }>
         { todos.map(todo => (
           <HStack key={ todo.id }>
